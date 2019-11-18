@@ -47,6 +47,26 @@
             <%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)
           <% end %>
         </li>
+        <li>
+          <% if current_user %>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="text-primary"><%= current_user.first_name %></span>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'Logut', '/logout' %></li>
+          </ul>
+          <% else %>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <span class="text-primary"><%= fa_icon 'lock', text: 'User' %></span>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to 'Login', '/login' %></li>
+              <li><%= link_to 'Signup',  '/signup' %></li>
+            </ul>
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>
