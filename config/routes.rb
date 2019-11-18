@@ -1,8 +1,9 @@
-Rails.application.routes.draw do
+# frozen_string_literal: true
 
+Rails.application.routes.draw do
   root to: 'products#index'
 
-  resources :products, only: [:index, :show]
+  resources :products, only: %i[index show]
   resources :categories, only: [:show]
 
   resource :cart, only: [:show] do
@@ -10,15 +11,18 @@ Rails.application.routes.draw do
     post   :remove_item
   end
 
-  resources :orders, only: [:create, :show]
+  resources :orders, only: %i[create show]
 
   namespace :admin do
     root to: 'dashboard#show'
-    resources :products, except: [:edit, :update, :show]
-    resources :categories, only: [:index, :new, :create]
+    resources :products, except: %i[edit update show]
+    resources :categories, only: %i[index new create]
   end
 
-  get '/about', :to => 'about#show'
+  get '/about', to: 'about#show'
+
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
