@@ -22,18 +22,14 @@ RSpec.feature "AddToCarts", type: :feature, js: true do
     visit root_path
 
     expect(page).to have_css 'article.product', count: 1
-
-      
     sleep(4)
 
-    page.find('article footer').hover
+    expect(page).to have_content 'My Cart (0)'
 
-    sleep(1)
-
-    find.('article footer form').click
-    
+    page.all('form .fa.fa-shopping-cart').first.click
     sleep(2)
 
+    expect(page).to have_content 'My Cart (1)'
     # DEBUG / VERIFY
     save_screenshot
   end
