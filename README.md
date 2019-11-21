@@ -25,3 +25,28 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+* pg
+* sass-rails
+* uglifier
+* jquery rails
+* turbolinks
+* jbuilder
+* sdoc
+* bcrypt
+* puma
+* bootstrap-sass
+* font-awesome-rails
+* money-rails
+* carrierwave
+* rmagick
+* faker
+
+## Screenshots
+
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
