@@ -42,11 +42,18 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * faker
 
 ## Screenshots
+The home page displays all the products.
+![Home page, user logged in.](https://github.com/JakeFantin/jungle-rails/blob/master/docs/home-loggedin.png?raw=true)
 
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
+You can click on a product to see it details with a larger image.
+![Product details page.](https://github.com/JakeFantin/jungle-rails/blob/master/docs/productdetails.png?raw=true)
+
+The cart page.
+![Cart page.](https://github.com/JakeFantin/jungle-rails/blob/master/docs/cart.png?raw=true)
+
+The signup page, which is very similar in construction to the login page.
+![Signup Page](https://github.com/JakeFantin/jungle-rails/blob/master/docs/signup.png?raw=true)
+
+Admin priviledges (which require a particular username and password) allow viewing of all the categories and products on the site, as well as the option to add new objects to both database tables, and the option to remove products.
+![Admin capability to view products, add and remove products.](https://github.com/JakeFantin/jungle-rails/blob/master/docs/adminproducts.png?raw=true)
+
